@@ -1,4 +1,5 @@
 🎧 DJ-A (With Gesture Control) 🎶
+
 Would you like to control your favorite music without a keyboard or buttons, like a futuristic DJ? 🕶️🎛️ Well...U can do it now! This gesture detection project converts your hands into multimedia controllers that let you change the song and adjust the volume. All without touching any device! 👀
 
 🖐️ What does this project do? 
