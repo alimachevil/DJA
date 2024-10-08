@@ -7,8 +7,11 @@ Would you like to control your favorite music without a keyboard or buttons, lik
 With the help of MediaPipe and OpenCV, this program detects the movements of your hands to realize actions like:
 
 Next song 👉: Slide three fingers (Index, middle, and ring fingers) to the right.
+
 Previous song 👈: Slide those three same fingers to the left. 
+
 Turn it up some more 🔊: Raise both hands.
+
 Make it lower 🔉: Put both hands down.
 
 Full air control! 🎐
