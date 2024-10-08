@@ -1,5 +1,6 @@
 import cv2
 import mediapipe as mp
+import pyautogui  # Biblioteca para controlar el teclado y multimedia
 
 # Inicialización de MediaPipe y OpenCV
 mp_hands = mp.solutions.hands
@@ -59,9 +60,11 @@ while cap.isOpened():
             # Verificar si tenemos una posición anterior para comparar
             if previous_heights[i] is not None:
                 if current_height < previous_heights[i] - 0.02:  # Manos suben
-                    print("Gesto detectado: Subir volumen")
+                    print("Subiendo volumen")
+                    pyautogui.press("volumeup")  # Subir volumen
                 elif current_height > previous_heights[i] + 0.02:  # Manos bajan
-                    print("Gesto detectado: Bajar volumen")
+                    print("Bajando volumen")
+                    pyautogui.press("volumedown")  # Bajar volumen
 
             # Actualizar la altura anterior para la próxima iteración
             previous_heights[i] = current_height
@@ -83,10 +86,12 @@ while cap.isOpened():
                 
                 direction = detect_swipe_direction(start_position, current_position)
                 if direction == "right":
-                    print("Gesto detectado: Siguiente canción")
+                    print("Siguiente canción")
+                    pyautogui.press("nexttrack")  # Siguiente canción
                     gesture_active = False
                 elif direction == "left":
-                    print("Gesto detectado: Canción anterior")
+                    print("Canción anterior")
+                    pyautogui.press("prevtrack")  # Canción anterior
                     gesture_active = False
         else:
             gesture_active = False  # Reiniciar si no están extendidos
